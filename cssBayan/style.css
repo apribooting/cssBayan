@@ -1,0 +1,57 @@
+body  {
+    
+    
+    
+    background-color: rgb(197, 197, 197);
+}
+.bayan {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    margin-left: 16%;
+    margin-top: 3%;
+    
+}
+.bayan_head {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+    font-stretch: ultra-expanded;
+    border-bottom: solid 1px gray;
+    padding-bottom: 10px;
+}
+
+.bayan_item {
+    
+    transition: 0.3s;
+    cursor: pointer;
+    color: orange;
+    margin-top: 10px;
+    text-shadow:  1px 1px 2px black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    font-stretch: ultra-expanded;
+    border-bottom: solid 1px gray;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bayan_item:hover {
+    
+    color: black;
+    
+}
+.bayan_item_trigger {
+    display: block;
+}
+.bayan_item_trigger:after {
+    content: ' \002b';
+    transition: 0.1s;
+   
+}
+
