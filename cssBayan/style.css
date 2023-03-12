@@ -7,7 +7,10 @@ body  {
     margin: 0 auto;
 }
 
-.accordion {}
+.accordion {
+    padding: 20px;
+    border: 2px dotted yellow;
+}
 
 .accordion-head{
     font-family: 'Roboto', sans-serif;
@@ -20,6 +23,7 @@ body  {
 .accordion-item{
     position: relative;
     margin-bottom: 10px;
+    transition: 0.3s;
 }
 
 .accordion-item-input{
@@ -27,9 +31,11 @@ body  {
     top: 0;
     left: 0;
     opacity: 0;
+    transition: 0.3s;
 }
 
 .accordion-item-trigger{
+    cursor: pointer;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: larger;
@@ -37,6 +43,7 @@ body  {
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid black;
+    transition: 0.3s;
     
 }
 
@@ -44,25 +51,79 @@ body  {
     content: '\002B';}
 .accordion-item-content{
     padding: 20px;
-    
+    transition: 0.3s;
     border-top: none;
     display: none;
 }
 
 .accordion-item-input:checked ~ .accordion-item-trigger{
     border-bottom: none;
+    color: white;
+    text-shadow: 1px 2px black;
 }
 
 .accordion-item-input:checked ~ .accordion-item-trigger::after{
-    content: '\0078';}
+    content: '\0078';
+    }
 .accordion-item-input:checked ~ .accordion-item-content {
-    display: block;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid black;
+    opacity: 1;
 }
 
 .meme{
     width: 500px;
     height: 500px;
+    
 }
 
+@media (max-width: 1180px) {
+    .meme{
+        width: 300px;
+        height: 300px;
+    }
+    .accordion-head{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: medium;
+        padding: 25px;
+        border-bottom: 1px solid black;
+    }
+    .accordion-item-trigger{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        font-size: medium;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        border-bottom: 1px solid black;
+        
+    }
+}
 
+@media (max-width: 360px) {
+    .meme{
+        width: 200px;
+        height: 200px;
+    }
+
+    .accordion-head{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: small;
+        padding: 10px;
+        border-bottom: 1px solid black;
+    }
+    .accordion-item-trigger{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid black;
+        
+    }
+}
+    
