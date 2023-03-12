@@ -1,57 +1,63 @@
-body  {
-    
-    
-    
-    background-color: rgb(197, 197, 197);
+body  {   
+    background-color: rgb(246, 175, 218);
 }
-.bayan {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: auto;
-    margin-left: 16%;
-    margin-top: 3%;
-    
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
 }
-.bayan_head {
+
+.accordion {}
+
+.accordion-head{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: xx-large;
-    font-stretch: ultra-expanded;
-    border-bottom: solid 1px gray;
-    padding-bottom: 10px;
+    font-size: larger;
+    padding: 20px;
+    border-bottom: 1px solid black;
 }
 
-.bayan_item {
-    
-    transition: 0.3s;
-    cursor: pointer;
-    color: orange;
-    margin-top: 10px;
-    text-shadow:  1px 1px 2px black;
+.accordion-item{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.accordion-item-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.accordion-item-trigger{
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: xx-large;
-    font-stretch: ultra-expanded;
-    border-bottom: solid 1px gray;
-    padding-bottom: 10px;
+    font-weight: 800;
+    font-size: larger;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    
 }
 
-.bayan_item:hover {
+.accordion-item-trigger::after{
+    content: '\002B';}
+.accordion-item-content{
+    padding: 20px;
     
-    color: black;
-    
+    border-top: none;
+    display: none;
 }
-.bayan_item_trigger {
+
+.accordion-item-input:checked ~ .accordion-item-trigger{
+    border-bottom: none;
+}
+
+.accordion-item-input:checked ~ .accordion-item-trigger::after{
+    content: '\0078';}
+.accordion-item-input:checked ~ .accordion-item-content {
     display: block;
+    border-bottom: 1px solid black;
 }
-.bayan_item_trigger:after {
-    content: ' \002b';
-    transition: 0.1s;
-   
-}
+
 
